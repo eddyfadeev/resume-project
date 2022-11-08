@@ -1,0 +1,13 @@
+.http-text {
+  color: #89c891 !important;
+}
+
+
+
+a {
+  color: #CDCDCD;
+}
+
+a:hover {
+  color: lightblue;
+}
