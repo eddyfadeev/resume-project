@@ -8,15 +8,17 @@ import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbAlertModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {NgIconsModule} from "@ng-icons/core";
 import {
   tablerBrandLinkedin,
   tablerBrandFacebook,
   tablerBrandTelegram,
   tablerBrandGithub,
-tablerHeart} from '@ng-icons/tabler-icons';
+  tablerHeart,
+  tablerArrowRight} from '@ng-icons/tabler-icons';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from "@angular/forms";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -43,8 +45,12 @@ const appRoutes: Routes = [
       tablerBrandFacebook,
       tablerBrandTelegram,
       tablerBrandGithub,
-      tablerHeart}),
+      tablerHeart,
+      tablerArrowRight,
+    }),
     RouterModule.forRoot(appRoutes),
+    FormsModule,
+    NgbAlertModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
